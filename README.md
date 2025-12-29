@@ -63,9 +63,9 @@ Clone este repositório para a sua máquina local:
 bash
 git clone https://github.com/seu-usuario/loan-imobiliario.git
 cd loan-imobiliario
+
 2. Configuração do Banco de Dados
 Este projeto usa o Oracle XE como banco de dados. Você pode usar o Docker para rodar o banco de dados localmente:
-
 bash
 Copiar código
 docker-compose up -d
@@ -73,12 +73,10 @@ Isso irá iniciar um container Docker com o Oracle XE.
 
 3. Executando o Projeto
 Após configurar o banco de dados, rode a aplicação utilizando o Maven:
-
 bash
 Copiar código
 ./mvnw spring-boot:run
 Ou, se você já tiver o JDK 17 instalado:
-
 bash
 Copiar código
 mvn spring-boot:run
@@ -86,14 +84,11 @@ A aplicação estará disponível em http://localhost:8080.
 
 4. Endpoints da API
 POST /api/v1/loans/simulate: Simula um empréstimo com base nos parâmetros fornecidos.
-
 POST /api/v1/loans/apply: Solicita o empréstimo, iniciando o processo de análise de crédito.
-
 GET /api/v1/loans/{id}/status: Verifica o status do empréstimo (aprovado, pendente, negado).
 
 5. Dockerização
 Se preferir, você pode também rodar a aplicação e o banco de dados com Docker. Para isso, crie a imagem e rode o container:
-
 bash
 Copiar código
 docker build -t loan-imobiliario .
